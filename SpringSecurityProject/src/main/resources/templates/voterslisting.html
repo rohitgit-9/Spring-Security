@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <p>
+        <span >Vote Summary</span>
+        </p>
+      
+      	
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Votes</th>
+            </tr>
+            <tr th:each="product : ${users}">
+              <td th:text="${product.name}"></td>
+              <td th:text="${product.count}"></td>
+            </tr>
+          <table>
+    </body>
+</html>
